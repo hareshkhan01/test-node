@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:20-alpine
 
 # Set working directory
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Expose port (optional but recommended)
-EXPOSE 3000
+EXPOSE 8000
 
 # Start app
 CMD ["node", "index.js"]
