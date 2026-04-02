@@ -1,19 +1,7 @@
-FROM node:20-alpine
-
-# Set working directory
+FROM docker.io/oven/bun:latest
 WORKDIR /app
-
-# Copy only package files first (for caching)
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy remaining files
+COPY package.json bun.lock ./
+RUN bun install
 COPY . .
-
-# Expose port (optional but recommended)
-EXPOSE 8000
-
-# Start app
-CMD ["node", "index.js"]
+EXPOSE 5173
+CMD ["bun", "run", "build"]
