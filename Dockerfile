@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . .
 RUN bun install
 EXPOSE 8000
-CMD ["bun", "run", "build"]
+CMD ["bun", "run", "dev"]
