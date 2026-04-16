@@ -2,9 +2,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.vite
-    ports:
-      - "3000:3000"
+      dockerfile: Dockerfile
     environment:
       - NODE_ENV=production
     restart: unless-stopped
