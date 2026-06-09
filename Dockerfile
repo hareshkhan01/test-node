@@ -2,5 +2,5 @@ FROM docker.io/oven/bun:latest
 WORKDIR /app
 COPY . .
 RUN bun install
-EXPOSE 8000
+EXPOSE 8001
 CMD ["bun", "run", "dev"]
