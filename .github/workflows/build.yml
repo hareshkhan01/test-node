@@ -1,7 +1,7 @@
 name: Build and Push to GHCR
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
